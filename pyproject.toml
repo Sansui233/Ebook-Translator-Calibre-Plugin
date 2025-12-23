@@ -1,0 +1,31 @@
+[project]
+name = "ebook-translator-calibre-plugin"
+version = "0.1.0"
+description = "A Calibre plugin to translate ebooks into specified languages using various translation engines"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    # Note: This is a Calibre plugin. Calibre, Qt, lxml, and mechanize are provided by Calibre itself.
+    # These dependencies are only for type checking and development outside Calibre's environment.
+    "lxml-stubs>=0.5.1",
+    "types-lxml>=2023.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "mypy>=1.0.0",
+    "PyQt6-stubs>=6.4.0",
+]
+
+# Runtime dependencies provided by Calibre (for documentation purposes)
+# - calibre >= 5.0.0
+# - Python >= 3.8.5
+# - Qt6 (via Calibre's qt.core module)
+# - lxml (bundled with Calibre)
+# - mechanize (bundled with Calibre)
+
+[[tool.uv.index]]
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+default = true

@@ -1,6 +1,9 @@
+.venv
 .idea
+.vscode
 .DS_Store
 .jekyll-cache
 _site
 *.pyc
 tags
+CLAUDE.md
